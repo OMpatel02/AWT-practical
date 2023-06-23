@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animaton</title>
+    <style>
+        div
+        {
+                height: 200px;
+                width: 200px;
+                transition: 2s;
+                font-size: 25px;
+                font-weight: bold;
+                color: #000000;
+                background-color: cyan;
+                border-radius: 7%;
+        }
+        #translate:hover
+        {
+            -webkit-transform:translate(100px,100px);
+            -moz-transform:translate(100px,100px);
+            -o-transform:translate(100px,100px);
+            transform:translate(100px,100px);
+            background-color: chartreuse ;
+            color: yellow;
+        }
+        #rotate:hover
+        {
+            -webkit-transform:rotate(360deg);
+            -moz-transform:rotate(360deg);
+            -o-transform:rotate(360deg);
+            transform:rotate(360deg);
+            background-color: blue;
+            color: yellow;
+        }
+        #theed:hover
+        {
+            -webkit-transform:rotate3d(1,1,0,360deg);
+            -moz-transform:rotate3d(1,1,0,360deg);
+            -o-transform:rotate3d(1,1,0,360deg);
+            transform:rotate3d(1,1,0,360deg);
+            background-color: hotpink;
+            color: yellow;
+        }
+        #skew:hover
+        {
+            -webkit-transform:skew(90deg);
+            -moz-transform:skew(90deg);
+            -o-transform:skew(90deg);
+            transform:skew(90deg);
+            background-color: lightgreen;
+            color: yellow;
+        }
+    #scale:hover
+    {
+        -webkit-transform:scale(o.5);
+        -moz-transform:scale(0.5);
+        -o-transform:scale(0.5);
+        transform:scale(0.5);
+        background-color: deeppink;
+        color: yellow;
+    }
+    #opacity:hover    
+    {
+        opacity:-1;
+    }
+    #rgba:hover
+    {
+        background:rgba(128,128,0,0.6) ;
+    }
+    #boxshadow:hover
+    {
+        box-shadow: 0px 0px 20px rgb(1, 23, 22);
+    }
+    #borderradius:hover
+    {
+        border-radius: 50%;
+    }
+    #overflow
+    {
+        overflow: auto;
+    }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="rotate">1</div><hr>
+    <div id="translate">2</div><hr>  
+    <div id="theed">3</div><hr>
+    <div id="skew">4</div><hr>
+    <div id="scale">5</div><hr>
+    <div id="opacity">6</div><hr>
+    <div id="rgba">7</div><hr>
+    <div id="boxshadow">8</div><hr>
+    <div id="borderradius">9</div><hr>
+    <div id="overflow">
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+        OVERFLOW
+    </div><hr>
+    </center> 
+</body>
+</html>
