@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Media Queryy</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style type="text/css">
+        #d1
+        {
+            height: 400px;
+            width: 400px;
+            background-color: rgb(224, 11, 82);
+        }
+        @media(min-width: 500px)
+        {
+            #d1
+            {
+                height: 300px;
+                width: 300px;
+                background-color: rgb(105, 240, 127);
+            }
+        }
+        @media(min-width: 768px)
+        {
+            #d1
+            {
+                height: 200px;
+                width: 200px;
+                background-color: rgb(240, 120, 83);
+            }
+        }
+        @media(min-width: 992px)
+        {
+            #d1
+            {
+                height: 100px;
+                width: 100px;
+                background-color: rgb(97, 59, 231);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+</body>
+</html>
