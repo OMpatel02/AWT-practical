@@ -1,83 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>JQuery Demo1</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-            $("#bshow").attr("disabled",true);
-            $("#bhide").click(function()
-            {
-             if(confirm("Are You Sure..!!"))
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQuery Demo 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$("#btnShow").attr("disabled", true);
+	        $("#btnHide").click(function() 
+	        {
+                if (confirm("Are You sure?")) 
                 {
-                    $("#MyDiv").hide(3000);
-                    $(this).attr("disabled",true);
-                    $("#bshow").attr("disabled",false);
-                    $("#btoggle").text("Show");
-                 }   
-            });
-            $("#bshow").click(function()
-            {
-                if(confirm("Are You Sure..!!"))
-                {
-                    $("#MyDiv").show(3000);
-                    $(this).attr("disabled",true);
-                    $("#bhide").attr("disabled",false);
-                    $("#btoggle").text("Hide");
-                }   
-            });
-            $("#btoggle").click(function()
-            {
-                if(confirm("Are You sure?"))
-                {
-                    $("#MyDiv").toggle(3000);
-                    ($(this).text() == "Hide") ?
-                    ($(this.text("show")), $("#bhide").attr("disabled", true), $("#bshow".attr("disabled", false))):
-                    ($(this.text("Hide")), $("#bhide".attr("disabled", false)),$(""))
+					$("#MyDiv").hide(3000);
+			        $(this).attr("disabled", true);
+                    $("#btnShow").attr("disabled", false);
+                    $("#btnToggle").text("Show");
                 }
             });
-            $("#bplus").click(function()
-		    {
-			    var MDH=parseInt($("#MyDiv").css("height"));
-			    if(MDH<=500)
-			    {
-				    MDH+=10;
-				    $("#MyDiv").css("height",MDH);
-				    $("#MyDiv").css("width",MDH);
-				}
-				else
+            $("#btnShow").click(function() 
+	        {
+                if (confirm("Are You sure?")) 
+                {
+					$("#MyDiv").show(3000);
+			        $(this).attr("disabled", true);
+                    $("#btnHide").attr("disabled", false);
+                    $("#btnToggle").text("Hide");
+                }
+            });
+            $("#btnToggle").click(function() 
+            {
+            	if (confirm("Are You sure?")) 
+            	{
+            		$("#MyDiv").toggle(3000);
+                	if ($(this).text() == "Hide") 
+                	{
+                		$(this).text("Show");
+                		$("#btnHide").attr("disabled", true);
+                		$("#btnShow").attr("disabled", false);
+                	}
+                	else if ($(this).text() == "Show")
+                	{
+                		$(this).text("Hide");
+                		$("#btnHide").attr("disabled", false);
+                		$("#btnShow").attr("disabled", true);
+                	}
+                }
+			}); 
+            $("#btnPlus").click(function()
+			{
+				var MDH=parseInt($("#MyDiv").css("height"));
+				if(MDH<=500)
 				{
-					alert("More than 500px is not possible.");
-				}
-		    });
-		    $("#bminus").click(function()
-		    {
-			    var MDH=parseInt($("#MyDiv").css("height"));
-			    if(MDH>=20)
-			    {
-				    MDH-=10;
-				    $("#MyDiv").css("height",MDH);
-				    $("#MyDiv").css("width",MDH);
-				}
-				else
+					MDH+=10;
+					$("#MyDiv").css("height",MDH);
+					$("#MyDiv").css("width",MDH);
+					}
+					else
+					{
+						alert("More than 500px is not possible.");
+					}
+			});
+			$("#btnMinus").click(function()
+			{
+				var MDH=parseInt($("#MyDiv").css("height"));
+				if(MDH>=20)
 				{
-					alert("Less than 20px is not possible.");
-				}
-		    });    
+					MDH-=10;
+					$("#MyDiv").css("height",MDH);
+					$("#MyDiv").css("width",MDH);
+					}
+					else
+					{
+						alert("Less than 20px is not possible.");
+					}
+			});
         });
-    </script>
+	</script>
 </head>
 <body>
-<center>
-    <div id="MyDiv" style="height: 300px; width: 300px; background-color: rgb(10, 224, 224);"></div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button id="bhide">Hide</button>&nbsp;&nbsp;&nbsp;
-    <button id="bshow">Show</button>&nbsp;&nbsp;&nbsp;
-    <button id="btoggle">Toggle</button>&nbsp;&nbsp;&nbsp;<hr>
-    &nbsp;&nbsp;&nbsp;
-    <button id="bplus" style="font-size: xx-large;">+</button>&nbsp;&nbsp;&nbsp;
-    <button id="bminus" style="font-size: xx-large;">-</button>&nbsp;&nbsp;&nbsp;<hr>
-</center>
+	<div id="MyDiv" style="height: 300px; width: 300px; background-color: seagreen;"></div><br>
+	<button id="btnHide">Hide</button>&nbsp;&nbsp;
+	<button id="btnShow">Show</button><hr>
+	<button id="btnToggle">Hide</button><hr>
+	<button id="btnPlus" style="font-size: xx-large;"><b>+</b></button>&nbsp;&nbsp;
+	<button id="btnMinus" style="font-size: xx-large;"><b>-</b></button>
 </body>
 </html>
