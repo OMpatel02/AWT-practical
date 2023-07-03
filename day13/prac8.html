@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JQuery Interactions</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css">
+        <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <style type="text/css">
+        #MyDiv, #homeDiv, #verticalDiv, #horizontalDiv, #threeSecDelayDiv
+        {
+            border-radius: 7%;
+            height: 200px;
+            width: 200px;
+            padding: 10px;
+            background-color: seagreen;
+            color: #ffffff;
+            font-size: large;
+            font-weight: bold;
+        }
+        #fiftyWdiv
+        {
+            height: 400px;
+            width: 200px;
+            padding: 10px;
+            background-color: seagreen;
+            color: #ffffff;
+            font-size: large;
+            font-weight: bold;
+        }
+        #homeDiv, #verticalDiv, #horizontalDiv, #threeSecDelayDiv, #fiftyWdiv
+        {
+            border: solid 3px #000000;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#MyDiv").draggable();
+            $("#homeDiv span").draggable(
+            {
+                containment: "#homeDiv"
+            });
+            $("#horizontalDiv span").draggable(
+            {
+                axis: "x"
+            });
+            $("#verticalDiv span").draggable(
+            {
+                axis: "y"
+            });
+            $("#threeSecDelayDiv span").draggable(
+            {
+                delay: 3000
+            });
+            $("#fiftyWdiv span").draggable(
+            {
+                distance: 100
+            });
+        });
+    </script>
+</head>
+<body>
+    <center>
+    <div id="MyDiv">
+        <p>Hello Ma'aM</p>
+    </div>
+    <hr>
+    <div id="homeDiv">
+        <span>This is My Home and I can Move within only.</span>
+    </div>
+    <hr>
+    <div id="verticalDiv">
+        <span>I can move vertically only.</span>
+    </div>
+    <hr>
+    <div id="horizontalDiv">
+        <span>I can move horizontal only.</span>
+    </div>
+    <hr>
+    <div id="fiftyWdiv">
+        <span>i can move only after 200px.</span>
+    </div>
+    <hr>
+    <div id="threeSecDelayDiv">
+        <span>I delay by 3 second.</span>
+    </div>
+    </center>
+</body>
+</html>
