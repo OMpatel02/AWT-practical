@@ -1,0 +1,45 @@
+<?php
+    $str = "Apple lab";
+    $rslt = addslashes($str);
+    echo $str."<br>";
+    echo "$rslt";
+    echo "<br>"."<br>"."<br>";
+    $str1 = "Nissan, Toyota, BWM, Hyundai";
+    $rslt1 = explode(",", $str1);
+    echo "<pre>";
+    print_r($rslt1);
+    echo "<br>"."<br>"."<br>";
+    $str2 = "Hello world, How are you?"; 
+    $rslt2 = explode(" ", $str2);
+    echo "<pre>";
+    print_r($rslt2);
+    echo "<br>"."<br>"."<br>";
+    $implode = implode(' ', $rslt1);
+    echo $implode;
+    print_r($rslt1);
+    echo "<br>"."<br>"."<br>";
+    echo strpos("hello how r u!!? fine!! thankyou", "Fine!!");
+    echo "<br>"."<br>"."<br>";
+    echo strlen("Hellooooooo");
+    echo "<br>"."<br>"."<br>";
+    echo stripos("hello how r u!!? fine!! thankyou", "Fine!!");
+    echo "<br>"."<br>"."<br>";
+    echo strrpos("hello how r u!!? fine!! thankyou", "Fine!!");
+    $htmlentity = "<hr><hr>";
+    htmlentities($htmlentity);
+    echo $htmlentity;
+    echo "<br>"."<br>"."<br>";
+    $text = "This is a nice text";
+    echo lcfirst($text);
+    echo "<br>"."<br>"."<br>";
+    echo ucfirst($text);
+    echo "<br>"."<br>"."<br>";
+    echo ucwords($text);
+    echo "<br>"."<br>"."<br>";
+    echo md5($text);
+    echo "<br>"."<br>"."<br>";
+    echo sha1($text);
+    echo "<br>"."<br>"."<br>";
+    echo ltrim($text);
+    echo "<br>"."<br>"."<br>";aa
+?>
